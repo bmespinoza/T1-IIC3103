@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Wikia</title>
+  <%- include ('partials/head.html') %>
+</head>
+<body>
+  <h1> Hello world</h1>
+  <h2>This is a Heading</h2>
+  <p>This is a paragraph.</p>
+
+  <img src="<%= resii.image%>" alt="personaje logo" style="width:300px">
+  <p><%= resii.name %></p>
+  <p><%= resii.status %></p>
+  <p><%= resii.species %></p>
+  <p><%= resii.type %></p>
+  <p><%= resii.gender %></p>
+  <p><%= resii.origin.name %></p>
+  <p> Locacion: </p>
+  <form action="locacion">
+    <input type="hidden" value="<%= resii.location.url %>" name="loc"/>
+    <input type="submit" value="<%= resii.location.name%>"/>
+  </form>
+  <p> Episodios: </p>
+  <% var i=0; %>
+  <% while(i < resii.caps.length){ %>
+    <form action="episodio">
+      <input type="hidden" value="<%= resii.episode[i] %>" name="epix"/>
+      <input type="submit" value="<%= resii.caps[i].name%>"/>
+    </form>
+    <% i++; %>
+  <%} %>
+
+
+
+
+  <%- include ('partials/footer.html')%>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Wikia</title>
+  <%- include ('partials/head.html') %>
+</head>
+<body>
+  <h1> Hello world</h1>
+  <h2>This is a Heading</h2>
+  <p>This is a paragraph.</p>
+
+  <p><%= resii.name %></p>
+  <p><%= resii.type %></p>
+  <p><%= resii.dimension %></p>
+  <p> Residentes: </p>
+  <% var i=0; %>
+  <% while(i < resii.residentes.length){ %>
+    <form action="personaje">
+      <input type="hidden" value="<%= resii.residents[i] %>" name="pers"/>
+      <input type="submit" value="<%= resii.residentes[i].name%>"/>
+    </form>
+    <% i++; %>
+  <%} %>
+
+
+
+
+  <%- include ('partials/footer.html')%>
+</body>
+</html>

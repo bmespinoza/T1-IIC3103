@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Wikia</title>
+  <%- include ('partials/head.html') %>
+</head>
+<body>
+  <h1> Hello world</h1>
+  <h2>This is a Heading</h2>
+  <p>This is a paragraph.</p>
+
+  <% var i=0; %>
+  <% while(i < resii[0].length){ %>
+    <form action="episodio">
+      <input type="hidden" value="<%= resii[0][i].url %>" name="epix"/>
+      <input type="submit" value="<%= resii[0][i].name%>"/>
+    </form>
+    <% i++; %>
+  <%}%>
+
+  <% var j=0; %>
+  <% while(j < resii[1].length){ %>
+    <form action="personaje">
+      <input type="hidden" value="<%= resii[1][j].url %>" name="pers"/>
+      <input type="submit" value="<%= resii[1][j].name%>"/>
+    </form>
+    <% j++; %>
+  <%}%>
+
+  <% var k=0; %>
+  <% while(k < resii[2].length){ %>
+    <form action="personaje">
+      <input type="hidden" value="<%= resii[2][k].url %>" name="pers"/>
+      <input type="submit" value="<%= resii[2][k].name%>"/>
+    </form>
+    <% k++; %>
+  <%}%>
+
+
+
+
+  <%- include ('partials/footer.html')%>
+</body>
+</html>
