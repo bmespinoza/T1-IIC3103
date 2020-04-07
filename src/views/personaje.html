@@ -9,12 +9,12 @@
   <h1> Personaje</h1>
 
   <img src="<%= resii.image%>" alt="personaje logo" style="width:300px">
-  <p><%= resii.name %></p>
-  <p><%= resii.status %></p>
-  <p><%= resii.species %></p>
-  <p><%= resii.type %></p>
-  <p><%= resii.gender %></p>
-  <p><%= resii.origin.name %></p>
+  <p>Nombre: <%= resii.name %></p>
+  <p>Estado: <%= resii.status %></p>
+  <p>Especie: <%= resii.species %></p>
+  <p>Tipo: <%= resii.type %></p>
+  <p>Genero: <%= resii.gender %></p>
+  <p>Lugar de origen: <%= resii.origin.name %></p>
   <p> Locacion: </p>
   <form action="locacion">
     <input type="hidden" value="<%= resii.location.url %>" name="loc"/>
